@@ -51,4 +51,6 @@ class PlayDeploymentConfiguration(
   override def getPushMode: PushMode = PushMode.DISABLED
 
   override def getLegacyPropertyToStringMode: LegacyProperyToStringMode = LegacyProperyToStringMode.DISABLED
+
+  override def isSyncIdCheckEnabled: Boolean = false
 }

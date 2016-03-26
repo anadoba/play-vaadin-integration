@@ -46,7 +46,7 @@ class VaadinPlayRequestHandler(deploymentConfiguration: PlayDeploymentConfigurat
 
       val (playSession, response) = doHandleRequest(request)
 
-      SimpleResult(
+      Result(
         header = ResponseHeader(response.statusCode, response.headersMap.toMap),
         body = Enumerator(response.outputStream.asInstanceOf[ByteArrayOutputStream].toByteArray)).withSession(playSession)
     }
